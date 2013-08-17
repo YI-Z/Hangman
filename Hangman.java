@@ -13,13 +13,14 @@ import java.awt.*;
 
 public class Hangman extends ConsoleProgram {
 	
-	private static final int GUESSES = 8;
+	private static final int GUESSES = 8;  //total times for guessing
 	
 
     public void run() {
 		HangmanLexicon lex = new HangmanLexicon();
 		String word = lex.getWord(rgen.nextInt(0, lex.getWordCount() - 1));
-		println(word);
+		//println(word);
+		
 		
 	}
     
