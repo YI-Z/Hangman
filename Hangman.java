@@ -17,9 +17,7 @@ public class Hangman extends ConsoleProgram {
 	private int guess_number = GUESSES;  //instant variable for guess numbers
 
     public void run() {
-    	//initialization of variables
-		
-		
+    	
 		int length = word.length();
 		//generate mask string
 		mask = "";
