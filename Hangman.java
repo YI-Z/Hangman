@@ -127,8 +127,9 @@ public class Hangman extends ConsoleProgram {
     	
     }
     HangmanLexicon lex = new HangmanLexicon();
+    RandomGenerator rgen = RandomGenerator.getInstance();
     String word = lex.getWord(rgen.nextInt(0, lex.getWordCount() - 1));
     String mask;  //instance for mask and word
     boolean win = false;  //status of game ending
-    RandomGenerator rgen = RandomGenerator.getInstance();
+    
 }
