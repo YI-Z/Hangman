@@ -44,9 +44,7 @@ public class HangmanCanvas extends GCanvas {
 		//add new tag
 		GLabel word_tag = new GLabel(word);
 		word_tag.setFont("TimesNewRoman-20");
-		double x = word_tag.getWidth();
-		double y = word_tag.getAscent();
-		word_tag.setLocation((getWidth()-x)/2, SCAFFOLD_OFFSET+SCAFFOLD_HEIGHT+SPACER);
+		word_tag.setLocation((getWidth()-word_tag.getWidth())/2, SCAFFOLD_OFFSET+SCAFFOLD_HEIGHT+SPACER);
 		add(word_tag);
 	}
 
@@ -57,7 +55,14 @@ public class HangmanCanvas extends GCanvas {
  * guesses that appears at the bottom of the window.
  */
 	public void noteIncorrectGuess(char letter) {
-		/* You fill this in */
+		//remove old tag
+		GObject old = getElementAt(getWidth()/2,getHeight()-BOTTOM_OFFSET);
+		if (old != null)	remove(old);
+		wrong += letter;
+		GLabel wrong_tag = new GLabel(wrong);
+		wrong_tag.setLocation(getWidth()/2-wrong_tag.getWidth()/2, getHeight()-BOTTOM_OFFSET);
+		
+		
 	}
 
 /* Constants for the simple version of the picture (in pixels) */
@@ -74,5 +79,7 @@ public class HangmanCanvas extends GCanvas {
 	private static final int FOOT_LENGTH = 28;
 	private static final int SCAFFOLD_OFFSET = 40;
 	private static final int SPACER = 20;
+	private static final int BOTTOM_OFFSET = 40;
+	private String wrong = "";
 
 }
