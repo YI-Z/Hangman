@@ -38,12 +38,15 @@ public class HangmanCanvas extends GCanvas {
  * been guessed so far; unguessed letters are indicated by hyphens.
  */
 	public void displayWord(String word) {
+		//remove old word tag
+		GObject old = getElementAt(getWidth()/2,SCAFFOLD_OFFSET+SCAFFOLD_HEIGHT+SPACER);
+		if (old != null)	remove(old);
+		//add new tag
 		GLabel word_tag = new GLabel(word);
 		word_tag.setFont("TimesNewRoman-20");
 		double x = word_tag.getWidth();
 		double y = word_tag.getAscent();
-		double spacer = 20;
-		word_tag.setLocation((getWidth()-x)/2, SCAFFOLD_OFFSET+SCAFFOLD_HEIGHT+spacer);
+		word_tag.setLocation((getWidth()-x)/2, SCAFFOLD_OFFSET+SCAFFOLD_HEIGHT+SPACER);
 		add(word_tag);
 	}
 
@@ -70,5 +73,6 @@ public class HangmanCanvas extends GCanvas {
 	private static final int LEG_LENGTH = 108;
 	private static final int FOOT_LENGTH = 28;
 	private static final int SCAFFOLD_OFFSET = 40;
+	private static final int SPACER = 20;
 
 }
