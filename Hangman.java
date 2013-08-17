@@ -27,6 +27,7 @@ public class Hangman extends ConsoleProgram {
 		{
 			mask += '-';
 		}
+		println(mask);
 		println("Welcome to Hangman!");
 		
 		
