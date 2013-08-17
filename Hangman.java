@@ -89,6 +89,13 @@ public class Hangman extends ConsoleProgram {
 		
 	}
     
+    public void init()
+    {
+    	canvas = new HangmanCanvas();
+    	add(canvas);
+    }
+    
+    
     //gameover function return the status of the game and also return
     //boolean value for win status
     private boolean gameOver()
@@ -135,10 +142,11 @@ public class Hangman extends ConsoleProgram {
     	
     }
     
-    private static HangmanLexicon lex = new HangmanLexicon();
-    private static RandomGenerator rgen = RandomGenerator.getInstance();
-    private static String word = lex.getWord(rgen.nextInt(0, lex.getWordCount() - 1));
-    private static String mask;  //instance for mask and word
-    private static boolean win = false;  //status of game ending
+    private HangmanLexicon lex = new HangmanLexicon();
+    private RandomGenerator rgen = RandomGenerator.getInstance();
+    private String word = lex.getWord(rgen.nextInt(0, lex.getWordCount() - 1));
+    private String mask;  //instance for mask and word
+    private boolean win = false;  //status of game ending
+    private HangmanCanvas canvas;
     
 }
