@@ -108,12 +108,12 @@ public class Hangman extends ConsoleProgram {
     	else
     	{
     		//k exist in the word
-    		while (index >= 0)
+    		while (index != -1)
     		{
     			//update mask
     			mask = mask.substring(0, index)+k+mask.substring(index+1);
     			//update index
-    			index = word.indexOf(k, index);
+    			index = word.indexOf(k, index+1);
     		}
     		return true;
     	}
