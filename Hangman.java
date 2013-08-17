@@ -21,7 +21,7 @@ public class Hangman extends ConsoleProgram {
 		String word = lex.getWord(rgen.nextInt(0, lex.getWordCount() - 1));
 		//println(word);
 		println("Welcome to Hangman!");
-		char a = (char) readInt();
+		char a = (char) readInt("Your guess: ");
 		println(a);
 		
 	}
