@@ -73,6 +73,12 @@ public class Hangman extends ConsoleProgram {
 		}
 		
 	}
+    
+    private boolean gameOver()
+    {
+    	
+    }
+    
     boolean win = false;  //status of game ending
     RandomGenerator rgen = RandomGenerator.getInstance();
 }
