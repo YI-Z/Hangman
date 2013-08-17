@@ -40,8 +40,9 @@ public class Hangman extends ConsoleProgram {
 			{
 				//check empty input
 				while (input == null)
+				{
 					input = readLine("Your guess: ");
-				
+				}
 				input = input.toUpperCase();
 				key = input.charAt(0);
 				if (input.length() == 1 && Character.isLetter(key))
