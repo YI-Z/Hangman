@@ -39,8 +39,12 @@ public class HangmanCanvas extends GCanvas {
  */
 	public void displayWord(String word) {
 		GLabel word_tag = new GLabel(word);
+		word_tag.setFont("TimesNewRoman-20");
 		double x = word_tag.getWidth();
 		double y = word_tag.getAscent();
+		double spacer = 20;
+		word_tag.setLocation((getWidth()-x)/2, SCAFFOLD_OFFSET+SCAFFOLD_HEIGHT+spacer);
+		add(word_tag);
 	}
 
 /**
