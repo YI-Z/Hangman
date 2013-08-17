@@ -78,7 +78,7 @@ public class HangmanCanvas extends GCanvas {
 	private static final int LEG_LENGTH = 108;
 	private static final int FOOT_LENGTH = 28;
 	private static final int SCAFFOLD_OFFSET = 40;
-	private static final int SPACER = 20;
+	private static final int SPACER = 30;
 	private static final int BOTTOM_OFFSET = 40;
 	private String wrong = "";
 
