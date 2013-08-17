@@ -66,8 +66,17 @@ public class Hangman extends ConsoleProgram {
 		else
 		{
 			println("You're completely hung.");
-			println("The word was: "+word);
-			println("You lose.");
+			//check whether want to play again
+			String playAgain = readLine("Play again? (Y/N)");
+			if (playAgain.compareTo("Y")==0 || playAgain.compareTo("y")==0)
+			{
+				run();
+			}
+			else
+			{	
+				println("The word was: "+word);
+				println("You lose.");
+			}
 		}
 		
 	}
