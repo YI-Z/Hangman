@@ -18,8 +18,8 @@ public class Hangman extends ConsoleProgram {
 
     public void run() {
     	//initialization of variables
-		HangmanLexicon lex = new HangmanLexicon();
-		word = lex.getWord(rgen.nextInt(0, lex.getWordCount() - 1));
+		
+		
 		int length = word.length();
 		//generate mask string
 		mask = "";
@@ -119,8 +119,9 @@ public class Hangman extends ConsoleProgram {
     	}
     	
     }
-    
-    String mask, word;  //instance for mask and word
+    HangmanLexicon lex = new HangmanLexicon();
+    String word = lex.getWord(rgen.nextInt(0, lex.getWordCount() - 1));
+    String mask;  //instance for mask and word
     boolean win = false;  //status of game ending
     RandomGenerator rgen = RandomGenerator.getInstance();
 }
