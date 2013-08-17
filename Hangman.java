@@ -60,7 +60,7 @@ public class Hangman extends ConsoleProgram {
 			
 		}
 		//game is over, display end message
-		if (win())
+		if (win)
 		{
 			println("You guessed the word: "+word);
 			println("You win.");
@@ -73,6 +73,6 @@ public class Hangman extends ConsoleProgram {
 		}
 		
 	}
-    
+    boolean win = false;
     RandomGenerator rgen = RandomGenerator.getInstance();
 }
