@@ -12,6 +12,9 @@ import acm.util.*;
 import java.awt.*;
 
 public class Hangman extends ConsoleProgram {
+	
+	private static final int GUESSES = 8;
+	
 
     public void run() {
 		HangmanLexicon lex = new HangmanLexicon();
