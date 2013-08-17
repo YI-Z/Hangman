@@ -14,7 +14,7 @@ import java.awt.*;
 public class Hangman extends ConsoleProgram {
 	
 	private static final int GUESSES = 8;  //total times for guessing
-	
+	private int guess_number = GUESSES;  //instant variable for guess numbers
 
     public void run() {
     	//initialization of variables
@@ -27,9 +27,13 @@ public class Hangman extends ConsoleProgram {
 		{
 			mask += '-';
 		}
-		println(word);
-		println(mask);
+		//now enters the output
 		println("Welcome to Hangman!");
+		while (!gameOver())
+		{
+			
+		}
+		
 		
 		
 	}
