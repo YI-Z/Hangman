@@ -68,6 +68,7 @@ public class Hangman extends ConsoleProgram {
 		//game is over, display end message
 		if (win)
 		{
+			//display word on canvas
 			canvas.displayWord(word);
 			println("You guessed the word: "+word);
 			println("You win.");
