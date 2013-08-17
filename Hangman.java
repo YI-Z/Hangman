@@ -32,7 +32,17 @@ public class Hangman extends ConsoleProgram {
 		//loop for game, gameOver() function returns game status
 		while (!gameOver())
 		{
-			
+			println("The word now looks like this: "+mask);
+			println("You have "+guess_number+" guess(es) left.");
+			//ask for user input and check user input validity
+			String input = readLine("Your guess: ");
+			//check user input and convert to character key
+			//input more than 1 character or none
+			while (input.length() != 1) 
+			{
+				println("Illegal guess. Please retry.");
+				input = readLine("Your guess: ");
+			}	
 		}
 		
 		
