@@ -39,10 +39,11 @@ public class Hangman extends ConsoleProgram {
 			while (true) 
 			{
 				//check empty input
-				while (input.isEmpty())
+				do 
 				{
 					input = readLine("Your guess: ");
 				}
+				while (input.isEmpty());
 				input = input.toUpperCase();
 				key = input.charAt(0);
 				if (input.length() == 1 && Character.isLetter(key))
