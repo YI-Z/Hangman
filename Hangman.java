@@ -42,7 +42,10 @@ public class Hangman extends ConsoleProgram {
 			{
 				println("Illegal guess. Please retry.");
 				input = readLine("Your guess: ");
-			}	
+				input = input.toUpperCase();
+			}
+			char key = input.charAt(0);
+			
 		}
 		
 		
