@@ -65,7 +65,7 @@ public class HangmanCanvas extends GCanvas {
 		wrong_tag.setLocation(getWidth()/2-wrong_tag.getWidth()/2, getHeight()-BOTTOM_OFFSET);
 		add(wrong_tag);
 		//create hangman
-		GOval face = new GOval(getWidth()/2-HEAD_RADIUS, SCAFFOLD_OFFSET+ROPE_LENGTH, 2*HEAD_RADIUS, 2*HEAD_RADIUS);
+		GOval head = new GOval(getWidth()/2-HEAD_RADIUS, SCAFFOLD_OFFSET+ROPE_LENGTH, 2*HEAD_RADIUS, 2*HEAD_RADIUS);
 		GLine body = new GLine(getWidth()/2, SCAFFOLD_OFFSET+ROPE_LENGTH+2*HEAD_RADIUS,
 								getWidth()/2, SCAFFOLD_OFFSET+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH);
 		GLine left_arm = new GLine(getWidth()/2,SCAFFOLD_OFFSET+ROPE_LENGTH+2*HEAD_RADIUS+ARM_OFFSET_FROM_HEAD,
@@ -88,6 +88,39 @@ public class HangmanCanvas extends GCanvas {
 								getWidth()/2-HIP_WIDTH/2-FOOT_LENGTH,SCAFFOLD_OFFSET+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH);
 		GLine right_foot = new GLine(getWidth()/2+HIP_WIDTH/2,SCAFFOLD_OFFSET+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH,
 				getWidth()/2+HIP_WIDTH/2+FOOT_LENGTH,SCAFFOLD_OFFSET+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH);
+		switch (wrong.length())
+		{
+		case 1:
+			add(head);
+			break;
+		case 2:
+			add(body);
+			break;
+		case 3:
+			add(left_arm);
+			add(left_hand);
+			break;
+		case 4:
+			add(right_arm);
+			add(right_hand);
+			break;
+		case 5:
+			add(left_leg_up);
+			add(left_leg_down);
+			break;
+		case 6:
+			add(right_leg_up);
+			add(right_leg_down);
+			break;
+		case 7:
+			add(left_foot);
+			break;
+		case 8:
+			add(right_foot);
+			break;
+		default:
+			break;
+		}
 
 	}
 
