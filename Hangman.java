@@ -33,7 +33,7 @@ public class Hangman extends ConsoleProgram {
 			println("The word now looks like this: "+mask);
 			println("You have "+guess_number+" guess(es) left.");
 			//ask for user input and check user input validity
-			String input = null;
+			String input = "";
 			char key;
 			//check user input and convert to character key
 			while (true) 
