@@ -19,10 +19,10 @@ public class Hangman extends ConsoleProgram {
     public void run() {
     	//initialization of variables
 		HangmanLexicon lex = new HangmanLexicon();
-		String word = lex.getWord(rgen.nextInt(0, lex.getWordCount() - 1));
+		word = lex.getWord(rgen.nextInt(0, lex.getWordCount() - 1));
 		int length = word.length();
 		//generate mask string
-		String mask = "";
+		mask = "";
 		for (int i = 0; i < length; i++)
 		{
 			mask += '-';
@@ -49,7 +49,7 @@ public class Hangman extends ConsoleProgram {
 			}
 			//checkKey() function compares the input key and string word
 			//and update the mask string, and return true or false
-			if (checkKey())
+			if (checkKey(key))
 			{
 				println("That guess is correct.");
 			}
@@ -74,12 +74,32 @@ public class Hangman extends ConsoleProgram {
 		
 	}
     
+    //gameover function return the status of the game and also return
+    //boolean value for win status
     private boolean gameOver()
     {
+    	//lose case
+    	if (guess_number == 0)
+    	{
+    		win = false;
+    		return true;
+    	}
+    	//win case
+    	if (mask.compareTo(word) == 0)
+    	{
+    		win = true;
+    		return true;
+    	}
     	
     	return false;
     }
     
+    private boolean checkKey(char k)
+    {
+    	return false;
+    }
+    
+    String mask, word;  //instance for mask and word
     boolean win = false;  //status of game ending
     RandomGenerator rgen = RandomGenerator.getInstance();
 }
