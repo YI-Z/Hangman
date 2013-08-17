@@ -113,7 +113,7 @@ public class Hangman extends ConsoleProgram {
     			//update mask
     			mask = mask.substring(0, index)+k+mask.substring(index+1);
     			//update index
-    			index = word.indexOf(k, index+1);
+    			index = word.indexOf(k, index + 1);
     		}
     		return true;
     	}
