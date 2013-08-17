@@ -17,12 +17,13 @@ public class Hangman extends ConsoleProgram {
 	
 
     public void run() {
+    	//initialization of variables
 		HangmanLexicon lex = new HangmanLexicon();
 		String word = lex.getWord(rgen.nextInt(0, lex.getWordCount() - 1));
-		//println(word);
+		int length = word.length();
+		
 		println("Welcome to Hangman!");
-		char a = (char) readInt("Your guess: ");
-		println(a);
+		
 		
 	}
     
