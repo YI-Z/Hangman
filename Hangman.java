@@ -33,12 +33,15 @@ public class Hangman extends ConsoleProgram {
 			println("The word now looks like this: "+mask);
 			println("You have "+guess_number+" guess(es) left.");
 			//ask for user input and check user input validity
-			String input;
+			String input = null;
 			char key;
 			//check user input and convert to character key
 			while (true) 
 			{
-				input = readLine("Your guess: ");
+				//check empty input
+				while (input == null)
+					input = readLine("Your guess: ");
+				
 				input = input.toUpperCase();
 				key = input.charAt(0);
 				if (input.length() == 1 && Character.isLetter(key))
