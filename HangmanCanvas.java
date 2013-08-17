@@ -20,6 +20,8 @@ public class HangmanCanvas extends GCanvas {
 					remove(obj);
 			}
 		}
+		//reset wrong string
+		wrong = "";
 		//add in scaffold
 		GLine scaffold = new GLine(getWidth()/2-BEAM_LENGTH, SCAFFOLD_OFFSET,
 								getWidth()/2-BEAM_LENGTH, SCAFFOLD_OFFSET+SCAFFOLD_HEIGHT);
@@ -80,6 +82,6 @@ public class HangmanCanvas extends GCanvas {
 	private static final int SCAFFOLD_OFFSET = 40;
 	private static final int SPACER = 30;
 	private static final int BOTTOM_OFFSET = 40;
-	private String wrong = "";
+	private String wrong;
 
 }
