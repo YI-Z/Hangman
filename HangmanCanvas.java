@@ -61,7 +61,7 @@ public class HangmanCanvas extends GCanvas {
 		wrong += letter;
 		GLabel wrong_tag = new GLabel(wrong);
 		wrong_tag.setLocation(getWidth()/2-wrong_tag.getWidth()/2, getHeight()-BOTTOM_OFFSET);
-		
+		add(wrong_tag);
 		
 	}
 
