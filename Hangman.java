@@ -67,7 +67,7 @@ public class Hangman extends ConsoleProgram {
 		{
 			println("You're completely hung.");
 			//check whether want to play again
-			String playAgain = readLine("Play again? (Y/N)");
+			String playAgain = readLine("Play again? (Y/N) ");
 			if (playAgain.compareTo("Y")==0 || playAgain.compareTo("y")==0)
 			{
 				//reset the game
