@@ -77,6 +77,7 @@ public class Hangman extends ConsoleProgram {
     private boolean gameOver()
     {
     	
+    	return false;
     }
     
     boolean win = false;  //status of game ending
