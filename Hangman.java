@@ -20,7 +20,9 @@ public class Hangman extends ConsoleProgram {
 		HangmanLexicon lex = new HangmanLexicon();
 		String word = lex.getWord(rgen.nextInt(0, lex.getWordCount() - 1));
 		//println(word);
-		
+		println("Welcome to Hangman!");
+		char a = (char) readInt();
+		println(a);
 		
 	}
     
