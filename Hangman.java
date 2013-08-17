@@ -47,11 +47,30 @@ public class Hangman extends ConsoleProgram {
 					break;
 				println("Illegal guess. Please retry.");
 			}
-			
+			//checkKey() function compares the input key and string word
+			//and update the mask string, and return true or false
+			if (checkKey())
+			{
+				println("That guess is correct.");
+			}
+			else
+			{
+				println("There are no "+key+"\'s in the word.");
+			}
 			
 		}
-		
-		
+		//game is over, display end message
+		if (win())
+		{
+			println("You guessed the word: "+word);
+			println("You win.");
+		}
+		else
+		{
+			println("You're completely hung.");
+			println("The word was: "+word);
+			println("You lose.");
+		}
 		
 	}
     
