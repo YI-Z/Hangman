@@ -29,6 +29,7 @@ public class Hangman extends ConsoleProgram {
 		}
 		//now enters the output
 		println("Welcome to Hangman!");
+		//loop for game, gameOver() function returns game status
 		while (!gameOver())
 		{
 			
