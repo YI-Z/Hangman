@@ -32,6 +32,7 @@ public class Hangman extends ConsoleProgram {
 		//loop for game, gameOver() function returns game status
 		while (!gameOver())
 		{
+			canvas.displayWord(mask);
 			println("The word now looks like this: "+mask);
 			println("You have "+guess_number+" guess(es) left.");
 			//ask for user input and check user input validity
