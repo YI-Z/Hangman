@@ -137,6 +137,6 @@ public class Hangman extends ConsoleProgram {
     private static RandomGenerator rgen = RandomGenerator.getInstance();
     private static String word = lex.getWord(rgen.nextInt(0, lex.getWordCount() - 1));
     private static String mask;  //instance for mask and word
-    private boolean win = false;  //status of game ending
+    private static boolean win = false;  //status of game ending
     
 }
