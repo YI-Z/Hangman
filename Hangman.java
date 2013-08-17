@@ -3,7 +3,7 @@
  * ------------------
  * This program will eventually play the Hangman game from
  * Assignment #4.
- * This game allows user to play the Hangman game.
+ *
  */
 
 import acm.graphics.*;
