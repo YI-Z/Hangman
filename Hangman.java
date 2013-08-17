@@ -70,6 +70,8 @@ public class Hangman extends ConsoleProgram {
 			String playAgain = readLine("Play again? (Y/N)");
 			if (playAgain.compareTo("Y")==0 || playAgain.compareTo("y")==0)
 			{
+				//reset the game
+				guess_number = GUESSES;
 				this.run();
 			}
 			else
