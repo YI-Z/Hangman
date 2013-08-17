@@ -88,6 +88,7 @@ public class HangmanCanvas extends GCanvas {
 								getWidth()/2-HIP_WIDTH/2-FOOT_LENGTH,SCAFFOLD_OFFSET+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH);
 		GLine right_foot = new GLine(getWidth()/2+HIP_WIDTH/2,SCAFFOLD_OFFSET+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH,
 				getWidth()/2+HIP_WIDTH/2+FOOT_LENGTH,SCAFFOLD_OFFSET+ROPE_LENGTH+2*HEAD_RADIUS+BODY_LENGTH+LEG_LENGTH);
+		//add in the handman
 		switch (wrong.length())
 		{
 		case 1:
