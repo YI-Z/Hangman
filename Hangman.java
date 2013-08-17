@@ -39,7 +39,7 @@ public class Hangman extends ConsoleProgram {
 			while (true) 
 			{
 				//check empty input
-				while (input == null)
+				while (input.isEmpty())
 				{
 					input = readLine("Your guess: ");
 				}
