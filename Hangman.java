@@ -21,7 +21,11 @@ public class Hangman extends ConsoleProgram {
 		HangmanLexicon lex = new HangmanLexicon();
 		String word = lex.getWord(rgen.nextInt(0, lex.getWordCount() - 1));
 		int length = word.length();
-		
+		String mask = "";
+		for (int i = 0; i < length; i++)
+		{
+			mask += '-';
+		}
 		println("Welcome to Hangman!");
 		
 		
