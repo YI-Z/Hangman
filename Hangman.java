@@ -94,9 +94,30 @@ public class Hangman extends ConsoleProgram {
     	return false;
     }
     
+    //checkKey function check whether character k exists in word
+    //if not, return false;else return true, and also update mask
     private boolean checkKey(char k)
     {
-    	return false;
+    	int index = word.indexOf(k);
+    	if (index == -1)
+    	{
+    		//k doesn't exist in word
+    		guess_number--;
+    		return false;
+    	}
+    	else
+    	{
+    		//k exist in the word
+    		while (index >= 0)
+    		{
+    			//update mask
+    			mask = mask.substring(0, index)+k+mask.substring(index+1);
+    			//update index
+    			index = word.indexOf(k, index);
+    		}
+    		return true;
+    	}
+    	
     }
     
     String mask, word;  //instance for mask and word
