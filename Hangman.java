@@ -61,6 +61,8 @@ public class Hangman extends ConsoleProgram {
 			}
 			else
 			{
+				//guess wrong, add letter and hang man
+				canvas.noteIncorrectGuess(key);
 				println("There are no "+key+"\'s in the word.");
 			}
 			
