@@ -13,14 +13,27 @@ import acm.util.*;
 public class HangmanLexicon {
 	
 	//HangmanLexicon constructor
-	public HangmanLexicon {
-		BufferedReader br = new BufferedReader(new FileReader("HangmanLexicon.txt"));
-		ArrayList lex = new ArrayList();
-		
+	public HangmanLexicon() {
+		//read in a file
+		try {
+			BufferedReader br = new BufferedReader(new FileReader("HangmanLexicon.txt"));
+			//define ArrayList for storage
+			lex = new ArrayList<String>();
+			while (true)
+			{
+				String buffer = br.readLine();
+				if (buffer == null)
+					break;
+				lex.add(buffer);
+			}
+			br.close();
+		} catch (IOException e) {
+			throw new ErrorException(e); 
+		}
 	}
 /** Returns the number of words in the lexicon. */
 	public int getWordCount() {
-		return 10;
+		return lex.size();
 	}
 
 /** Returns the word at the specified index. */
@@ -38,5 +51,8 @@ public class HangmanLexicon {
 			case 9: return "ZIRCON";
 			default: throw new ErrorException("getWord: Illegal index");
 		}
-	};
+	}
+	
+	/* private instances */
+	private ArrayList<String> lex;
 }
