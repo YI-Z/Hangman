@@ -5,10 +5,19 @@
  * class that you will reimplement for Part III of the assignment.
  */
 
+import java.io.*;
+import java.util.*;
+
 import acm.util.*;
 
 public class HangmanLexicon {
-
+	
+	//HangmanLexicon constructor
+	public HangmanLexicon {
+		BufferedReader br = new BufferedReader(new FileReader("HangmanLexicon.txt"));
+		ArrayList lex = new ArrayList();
+		
+	}
 /** Returns the number of words in the lexicon. */
 	public int getWordCount() {
 		return 10;
