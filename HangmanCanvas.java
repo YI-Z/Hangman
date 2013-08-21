@@ -11,15 +11,7 @@ public class HangmanCanvas extends GCanvas {
 /** Resets the display so that only the scaffold appears */
 	public void reset() {
 		//remove all objects on the canvas
-		for (int x = 0; x < getWidth(); x++)
-		{
-			for (int y = 0; y < getHeight(); y++)
-			{
-				GObject obj = getElementAt(x, y);
-				if (obj != null)	
-					remove(obj);
-			}
-		}
+		removeAll();
 		//reset wrong string
 		wrong = "";
 		//add in scaffold
